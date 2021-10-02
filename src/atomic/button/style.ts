@@ -2,7 +2,7 @@ import { css } from 'styled-components';
 import { colors, darken } from '../../style';
 
 export const variants = {
-	'brand-secondary': css`
+	'secondary': css`
 		background: rgba(0, 0, 0, 0.2);
 		border-color: transparent;
 		outline: none;
@@ -47,6 +47,22 @@ export const variants = {
 			background: ${darken(0.07, colors.action)};
 		}
 	`,
+	danger: css`
+		background: ${colors.tangerine};
+
+		border-color: transparent;
+		outline: none;
+		color: white;
+
+		&:hover {
+			background: ${darken(0.05, colors.tangerine)};
+		}
+
+		&:active,
+		&.active {
+			background: ${darken(0.07, colors.tangerine)};
+		}
+	`,
 };
 
 export const sizes = {
@@ -60,7 +76,7 @@ export const sizes = {
 		padding: '6px 12px',
 		height: '24px',
 		fontSize: '12px',
-		fontWeight: 400,
+		fontWeight: 600,
 		loaderProps: { size: 'xxs' },
 	},
 	sm: {

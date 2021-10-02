@@ -27,7 +27,7 @@ const UserBox = React.memo(({ id, parentId }: { id?: number; parentId?: number }
 			justifyContent={'flex-start'}
 			flexDirection={'column'}
 			alignItems={'flex-start'}
-			style={{ left: 20, position: 'relative' }}
+			style={{ left: 40, position: 'relative' }}
 			data-testid={user?.id}
 		>
 			<Div flexGrow={1}>
@@ -49,7 +49,7 @@ const UsersTreePage = () => {
 	}, []);
 
 	return (
-		<Div maxWidth={'500px'} marginHorizontal={'auto'}>
+		<Div padding={'lg'} maxWidth={'500px'} marginHorizontal={'auto'}>
 			<UserBox />
 		</Div>
 	);

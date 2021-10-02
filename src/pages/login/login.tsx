@@ -25,6 +25,7 @@ import encodeAuth from '../../helpers/encodeAuth';
 
 // types
 import { User } from '../../types/user';
+import { H1 } from '../../atomic/title';
 
 const LoginPage = ({ history }: any) => {
 	const { data: secrets } = useQuery(['secrets'], async () => {
@@ -68,6 +69,7 @@ const LoginPage = ({ history }: any) => {
 	return (
 		<Flex alignItems={'center'} justifyContent={'center'} height={'100%'}>
 			<Panel padding={'md'} variant={'shadow'} flexGrow={1} maxWidth={'600px'}>
+				<H1 marginTop={'none'}>Shall we?</H1>
 				<Formik
 					validateOnChange
 					validateOnMount

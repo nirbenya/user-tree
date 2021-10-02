@@ -6,7 +6,7 @@ import Panel from '../../atomic/panel';
 import Button from '../../atomic/button';
 import Input from '../../atomic/input';
 import { Flex, Span } from '../../atomic/box';
-import SquareButton from '../../atomic/button/square-button';
+import RoundButton from '../../atomic/button/round-button';
 import Icon from '../../atomic/icon';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@radix-ui/react-hover-card';
 import { Field, FieldProps, Formik } from 'formik';
@@ -42,13 +42,7 @@ const UserDetails = ({ user, isManager }: { user?: User; isManager?: boolean }) 
 	const onDelete = () => dispatch(deleteHierarchyUser({ id: user.id }));
 
 	return (
-		<Panel
-			componentClass={'article'}
-			variant={'white-border-shadow'}
-			borderRadius={'sm'}
-			padding={'sm'}
-			marginBottom={'xs'}
-		>
+		<Panel componentClass={'article'} variant={'card'} borderRadius={'md'} padding={'sm'} marginBottom={'xs'}>
 			<Formik
 				enableReinitialize
 				onSubmit={onUpdate}
@@ -74,15 +68,11 @@ const UserDetails = ({ user, isManager }: { user?: User; isManager?: boolean }) 
 										</H5>
 										<Text variant={'gray-50'}>{user.email}</Text>
 									</div>
-									<div>{user?.id}</div>
-									<div>
-										<Text size={'xs'}>{user?.managerId}</Text>
-									</div>
 								</Flex>
 							)}
 						</HoverCardTrigger>
 						{step === 'edit' && (
-							<Panel marginTop={'md'} borderRadius={'sm'} padding={'xs'} variant={'white-border-shadow'}>
+							<Panel borderRadius={'sm'} padding={'xs'} variant={'white-border-shadow'}>
 								<form>
 									<div>
 										<Field
@@ -139,24 +129,24 @@ const UserDetails = ({ user, isManager }: { user?: User; isManager?: boolean }) 
 							</Panel>
 						)}
 						<HoverCardContent side={'right'}>
-							<Panel padding={'md'} variant={'shadow'}>
+							<Panel padding={'xs'} variant={'shadow'}>
 								<Flex justifyContent={'space-between'} gap={'xs'}>
-									<SquareButton
+									<RoundButton
 										onClick={onDelete}
 										aria-label={'remove'}
-										variant={'brand'}
+										variant={'danger'}
 										size={'sm'}
 									>
 										<Icon name={'TRASH'} />
-									</SquareButton>
-									<SquareButton
+									</RoundButton>
+									<RoundButton
 										onClick={() => setStep('edit')}
 										aria-label={'edit'}
-										variant={'brand'}
+										variant={'secondary'}
 										size={'sm'}
 									>
 										<Icon name={'PENCIL'} />
-									</SquareButton>
+									</RoundButton>
 								</Flex>
 							</Panel>
 						</HoverCardContent>
