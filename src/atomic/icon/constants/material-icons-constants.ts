@@ -1,11 +1,11 @@
 export default {
 	PENCIL: {
 		icon: 'edit',
-		label: 'edit',
+		name: 'edit',
 	},
 	TRASH: {
 		icon: 'delete',
-		label: 'delete',
+		name: 'delete',
 	},
 	MINUS: {
 		icon: 'remove',
@@ -13,6 +13,6 @@ export default {
 	},
 	PLUS: {
 		icon: 'add',
-		label: 'add',
+		name: 'add',
 	},
 };

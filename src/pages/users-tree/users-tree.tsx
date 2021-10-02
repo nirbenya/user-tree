@@ -10,7 +10,7 @@ import { getHierarchyCollection, getIsManager, getUser } from '../../redux/peopl
 
 // components
 import { Div, Flex } from '../../atomic/box';
-import UserDetails from './user-details';
+import UserDetailsBox from './user-details-box';
 
 const UserBox = React.memo(({ id, parentId }: { id?: number; parentId?: number }) => {
 	const user = useSelector(state => getUser(state, id));
@@ -31,7 +31,7 @@ const UserBox = React.memo(({ id, parentId }: { id?: number; parentId?: number }
 			data-testid={user?.id}
 		>
 			<Div flexGrow={1}>
-				<UserDetails user={user} isManager={isManager} />
+				<UserDetailsBox user={user} isManager={isManager} />
 				<div>
 					{_.map(usersIndexes, id => (
 						<UserBox key={id} id={id} parentId={user?.id} />

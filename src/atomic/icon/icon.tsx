@@ -44,11 +44,9 @@ export const IconComponent = ({
 	'data-name': dataName,
 	'data-value': dataValue,
 	onMouseEnter,
-	'aria-label': ariaLabelProp,
 	role,
 }: IconProps) => {
 	const icon = _.get(materialIcons, [name, 'icon']);
-	const ariaLabel = materialIcons[name]?.label;
 
 	return (
 		<i
@@ -65,7 +63,6 @@ export const IconComponent = ({
 			data-name={dataName}
 			aria-hidden={true}
 			data-value={dataValue}
-			aria-label={ariaLabelProp || ariaLabel}
 			onMouseEnter={onMouseEnter}
 		>
 			{icon}

@@ -36,7 +36,7 @@ export const spacingNames = [
 	'paddingVertical',
 	'paddingHorizontal',
 ];
-export const withSpacing = props => css`
+export const withSpacing = (props: any) => css`
 	margin: ${props.margin && spacing[props.margin]};
 	margin-right: ${(props.marginRight && spacing[props.marginRight]) ||
 	(props.marginHorizontal && spacing[props.marginHorizontal])};

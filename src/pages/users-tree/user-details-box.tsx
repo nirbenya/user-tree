@@ -21,7 +21,7 @@ import { User } from '../../types/user';
 // actions
 import { deleteHierarchyUser, updateUserDetails } from '../../redux/people/people-actions';
 
-const UserDetails = ({ user, isManager }: { user?: User; isManager?: boolean }) => {
+const UserDetailsBox = ({ user, isManager }: { user?: User; isManager?: boolean }) => {
 	const dispatch = useDispatch();
 
 	const [step, setStep] = React.useState('start');
@@ -106,6 +106,7 @@ const UserDetails = ({ user, isManager }: { user?: User; isManager?: boolean }) 
 									</div>
 									<Flex marginTop={'sm'} gap={'xs'}>
 										<Button
+											block
 											size={'sm'}
 											variant={'secondary-clean'}
 											onClick={() => {
@@ -157,4 +158,4 @@ const UserDetails = ({ user, isManager }: { user?: User; isManager?: boolean }) 
 	);
 };
 
-export default UserDetails;
+export default UserDetailsBox;
