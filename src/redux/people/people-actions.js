@@ -12,7 +12,6 @@ import {
 
 export const fetchUsersHirarchy = () => {
 	return async dispatch => {
-		debugger;
 		dispatch({ type: FETCH_USERS_REQUEST });
 		const res = await fetch(`${DB_BASE_URL}/users.json`);
 

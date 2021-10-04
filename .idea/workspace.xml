@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63298a06-0c48-4f79-8ab5-0ae9439132cf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/atomic/hover-card/hover-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/atomic/hover-card/hover-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app-header/app-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app-header/app-header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login/login.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/login.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/users-tree/user-details-box.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/users-tree/user-details-box.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/users-tree/users-tree.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/users-tree/users-tree.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/auth/auth-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth/auth-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/people/people-actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/people/people-actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/people/people-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/people/people-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/spacing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/spacing.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1633089032861</updated>
-      <workItem from="1633089034430" duration="54772000" />
+      <workItem from="1633089034430" duration="55015000" />
     </task>
     <servers />
   </component>

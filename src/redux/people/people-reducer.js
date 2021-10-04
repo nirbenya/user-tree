@@ -47,8 +47,6 @@ function reducer(
 		}
 
 		case 'FETCH_USERS_SUCCESS': {
-			debugger;
-
 			return {
 				...state,
 				users: {
@@ -61,7 +59,6 @@ function reducer(
 		}
 
 		case 'UPDATE_USER_SUCCESS': {
-			debugger;
 			return {
 				...state,
 				users: {
