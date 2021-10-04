@@ -27,7 +27,7 @@ const UserBox = React.memo(({ id, parentId }: { id?: number; parentId?: number }
 			justifyContent={'flex-start'}
 			flexDirection={'column'}
 			alignItems={'flex-start'}
-			style={{ left: 40, position: 'relative' }}
+			style={parentId ? { left: 40, position: 'relative' } : {}}
 			data-testid={user?.id}
 		>
 			<Div flexGrow={1}>
@@ -44,6 +44,7 @@ const UserBox = React.memo(({ id, parentId }: { id?: number; parentId?: number }
 
 const UsersTreePage = () => {
 	const dispatch = useDispatch();
+
 	React.useEffect(() => {
 		dispatch(fetchUsersHirarchy());
 	}, []);

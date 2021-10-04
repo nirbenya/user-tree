@@ -19,7 +19,7 @@ import Text from '../../atomic/text';
 import { User } from '../../types/user';
 
 // actions
-import { deleteHierarchyUser, updateUserDetails } from '../../redux/people/people-actions';
+import { updateUserDetails } from '../../redux/people/people-actions';
 
 const UserDetailsBox = ({ user, isManager }: { user?: User; isManager?: boolean }) => {
 	const dispatch = useDispatch();
@@ -38,8 +38,6 @@ const UserDetailsBox = ({ user, isManager }: { user?: User; isManager?: boolean 
 			alert(e);
 		}
 	};
-
-	const onDelete = () => dispatch(deleteHierarchyUser({ id: user.id }));
 
 	return (
 		<Panel componentClass={'article'} variant={'card'} borderRadius={'md'} padding={'sm'} marginBottom={'xs'}>
@@ -132,12 +130,7 @@ const UserDetailsBox = ({ user, isManager }: { user?: User; isManager?: boolean 
 						<HoverCardContent side={'right'}>
 							<Panel padding={'xs'} variant={'shadow'}>
 								<Flex justifyContent={'space-between'} gap={'xs'}>
-									<RoundButton
-										onClick={onDelete}
-										aria-label={'remove'}
-										variant={'danger'}
-										size={'sm'}
-									>
+									<RoundButton aria-label={'remove'} variant={'danger'} size={'sm'}>
 										<Icon name={'TRASH'} />
 									</RoundButton>
 									<RoundButton

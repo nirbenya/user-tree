@@ -6,7 +6,6 @@ const initialState = { user: undefined };
 function reducer(state = initialState, action) {
 	switch (action.type) {
 		case SET_USER: {
-			debugger;
 			return {
 				...state,
 				user: action.payload,

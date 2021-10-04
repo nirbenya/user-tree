@@ -39,7 +39,7 @@ describe('<Login />', () => {
 			</QueryClientProvider>,
 		);
 
-		// expect button to be in disabled state when not values are entered
+		// expect button to be in disabled state when no values are entered
 		await waitFor(() => {
 			expect(screen.getByText('Log in')).toBeDisabled();
 		});
@@ -67,7 +67,7 @@ describe('<Login />', () => {
 			</QueryClientProvider>,
 		);
 
-		// expect button to be in disabled state when not values are entered
+		// expect button to be in disabled state when no values are entered
 		await waitFor(() => {
 			expect(screen.getByText('Log in')).toBeDisabled();
 		});

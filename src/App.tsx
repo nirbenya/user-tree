@@ -1,11 +1,17 @@
 import * as React from 'react';
 import { Redirect, Route, RouteProps, Switch } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
+// pages
 const LoginPage = React.lazy(() => import('./pages/login/login'));
 const UsersTreePage = React.lazy(() => import('./pages/users-tree/users-tree'));
+
+// components
 import AppHeader from './components/app-header/app-header';
-import { useSelector } from 'react-redux';
-import { isUserAuthenticated } from './redux/auth/auth-selectors';
 import { Div, Flex } from './atomic/box';
+
+// selectors
+import { isUserAuthenticated } from './redux/auth/auth-selectors';
 
 const ProtectedRoute = ({ component: Component, ...rest }: RouteProps) => {
 	const isAuthenticated = useSelector(isUserAuthenticated);
@@ -28,8 +34,8 @@ function App() {
 					<React.Suspense fallback={null}>
 						<Switch>
 							<ProtectedRoute path={'/'} exact component={() => <Redirect to={'/users'} />} />
-							<Route path={'/login'} component={LoginPage} />
 							<ProtectedRoute path={'/users'} component={UsersTreePage} />
+							<Route path={'/login'} component={LoginPage} />
 						</Switch>
 					</React.Suspense>
 				</Div>
