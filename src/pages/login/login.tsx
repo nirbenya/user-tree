@@ -2,7 +2,6 @@ import _ from 'lodash';
 import * as React from 'react';
 import { useQuery } from 'react-query';
 import { Field, Formik, FieldProps } from 'formik';
-import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 // actions
@@ -18,6 +17,7 @@ import Box, { Flex } from '../../atomic/box';
 import Input from '../../atomic/input';
 import Panel from '../../atomic/panel';
 import Button from '../../atomic/button';
+import { H1 } from '../../atomic/title';
 
 // helpers
 import regex from '../../helpers/regex';
@@ -25,7 +25,6 @@ import encodeAuth from '../../helpers/encodeAuth';
 
 // types
 import { User } from '../../types/user';
-import { H1 } from '../../atomic/title';
 
 const LoginPage = ({ history }: any) => {
 	const { data: secrets } = useQuery(['secrets'], async () => {
